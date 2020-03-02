@@ -1,11 +1,12 @@
 // Exercises Chapter 1 C++ Primer, Fifth Edition
 
 #include <iostream>
+#include <vector>
+#include "Sales_item.h"
 
 using namespace std;
 using std::cin;
 using std::cout;
-
 
 int main(){
 
@@ -63,25 +64,102 @@ int main(){
     // cout << sum << endl;
 
     //Ex 1.13
-    int sum = 0, val = 1;
-    // keep executing the while as long as val is less than or equal to 10
-    for (val = 1; val < 12; val++){
-        sum += val; // assigns sum + val to sum
+    // int sum = 0, val = 1;
+    // // keep executing the while as long as val is less than or equal to 10
+    // for (val = 1; val < 12; val++){
+    //     sum += val; // assigns sum + val to sum
+        
+    // }
+    // std::cout << "Sum of 1 to 10 inclusive is "
+
+    // << sum << std::endl;
+
+    // //Ex 1.15
+    // // error: used colon, not a semicolon, after endl
+    // std::cout << "Read each file." << std::endl;
+    // // error: missing quotes around string literal
+    // std::cout << "Update master." << std::endl;
+    // // error: second output operator is missing
+    // std::cout << "Write new master." << std::endl;
+    // // error: missing ; on return statement
+
+    //Ex 1.16
+    // int sum = 0;
+    // while(1){
+    //     int x;
+    //     cout << "Input number, finish with zero:" << endl;
+    //     cin >> x;
+    //     sum = sum +x;
+    //     if (x == 0){
+    //         break;
+    //     }
+    // }
+    // cout << "Result:" << endl;
+    // cout << sum << endl;
+
+    //Ex 1.17
+    // // currVal is the number we're counting; we'll read new values into val
+    // int currVal = 0, val = 0;
+    // // read first number and ensure that we have data to process
+    // if (std::cin >> currVal) {
+    //     int cnt = 1; // store the count for the current value we're processing
+    //     while (std::cin >> val) { // read the remaining numbers
+    //         if (val == currVal) // if the values are the same
+    //             ++cnt; // add 1 to cnt
+    //         else { // otherwise, print the count for the previous value
+    //             std::cout << currVal << " occurs " << cnt << " times" << std::endl;
+    //             currVal = val; // remember the new value
+    //             cnt = 1; // reset the counter
+    //          }
+    //     } // while loop ends here
+    // // remember to print the count for the last value in the file
+    // std::cout << currVal << " occurs "
+    // << cnt << " times" << std::endl;
+    // } // outermost if statement ends here
+
+    //Ex 1.18  the input values are equal, so the if func won't run. 
+
+    //Ex 1.19
+    // int v1, v2;
+    // cout << "Input v1: " << endl;
+    // cin >> v1;
+    // cout << "Input v2: " << endl;
+    // cin >> v2;
+    // int sum = 0, val = 0;
+    // if (v1 < v2){
+    //     val = v1;
+    //     while (val < v2){
+    //         sum += val;
+    //         val++;
+    //     }
+    // }else{
+    //     val = v2;
+    //     while(val < v1){
+    //         sum += val;
+    //         val++;
+    //     }
+    // }
+    // cout << "sum: " << sum << endl;
+    
+    //Ex 1.20
+    int w = 2;
+    Sales_item item1,item2,sum;
+    while(w > 1){
+        cout << "Enter the book:" << endl;
+        cin >> item1;
+        
+        if (item1.isbn() == item2.isbn()){
+            sum = item1 + item2;
+        }
+        else{
+            cout << "Another ISBN" << endl;
+        }
+        item2 = item1;
         
     }
-    std::cout << "Sum of 1 to 10 inclusive is "
-
-    << sum << std::endl;
-
-    //Ex 1.15
-    // error: used colon, not a semicolon, after endl
-    std::cout << "Read each file." << std::endl;
-    // error: missing quotes around string literal
-    std::cout << "Update master." << std::endl;
-    // error: second output operator is missing
-    std::cout << "Write new master." << std::endl;
-    // error: missing ; on return statement
-
+    cout << "Total sum with " + item1.isbn() + " equal: " << sum << endl;
     return 0;
+
+    
 }
 
