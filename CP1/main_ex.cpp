@@ -141,23 +141,43 @@ int main(){
     // }
     // cout << "sum: " << sum << endl;
     
-    //Ex 1.20
+    //Ex 1.20 to 1.22
     int w = 2;
-    Sales_item item1,item2,sum;
+    string y;
+    bool a = true;
+    Sales_item trans,sum;
+    int cnt = 0;
     while(w > 1){
+
+        // Enter the book
         cout << "Enter the book:" << endl;
-        cin >> item1;
-        
-        if (item1.isbn() == item2.isbn()){
-            sum = item1 + item2;
+        cin >> trans;
+
+        if(trans.isbn() == sum.isbn()){
+            sum = sum + trans;
+            cnt++;
+        }else{
+            cout << "New ISBN, do not add" << endl;
+            cout << "Total sum with " + sum.isbn() + " equal: " << sum << " with " << cnt << " transactions " << endl;
+            // Insert the new transactions to sum
+            sum = trans;
+            cnt = 1;
         }
-        else{
-            cout << "Another ISBN" << endl;
+
+        // Loop to continue add or break
+        cout << "Continue?" << endl;
+        cin >> y;
+        if (y == "y"){
+            a = true;
+        }else if(y == "n"){
+            a = false;
         }
-        item2 = item1;
+        if (a == false){
+            break;
+        }
         
     }
-    cout << "Total sum with " + item1.isbn() + " equal: " << sum << endl;
+    //cout << "Total sum with " + item1.isbn() + " equal: " << sum << endl;
     return 0;
 
     
