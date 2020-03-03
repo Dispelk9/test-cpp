@@ -10,9 +10,9 @@
             "args": [
               "-std=c++17",
               "-stdlib=libc++",
-              "main_cp1.cpp",
+              "main_cp2.cpp",
               "-o",
-              "main_cp1.out",
+              "main_cp2.out",
               "--debug"
             ],
             "group": {
