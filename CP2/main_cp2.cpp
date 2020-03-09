@@ -1,16 +1,7 @@
 #include <iostream>
+#include "Sales_data.h"
 
 using namespace std;
-
-// int ia = 42;
-
-//Ex 2.40 Struct
-struct Data_sales{
-    string Isbn;
-    int    b_sold;
-    float  b_price;
-    float total; //revenue
-};
 
  int main(){
      //Ex 2.1 2.2 2.3 2.4
@@ -129,10 +120,12 @@ struct Data_sales{
     cin >> b1.Isbn >> b1.b_sold >> b1.b_price;
     cin >> b2.Isbn >> b2.b_sold >> b2.b_price;
     if (b1.Isbn == b2.Isbn){
-        float Sum;
+        double Sum;
         b1.total = b1.b_sold * b1.b_price;
-        b2.total = b2.b_sold + b2.b_price;
+        b2.total = b2.b_sold * b2.b_price;
         Sum = b1.total + b2.total;
+        cout << "b1.total" << b1.total << endl;
+        cout << "b2.total" << b2.total << endl;
         cout << "Total: " << Sum << endl;
         return 0;
     }else{
