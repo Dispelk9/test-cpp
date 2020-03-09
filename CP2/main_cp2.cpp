@@ -2,7 +2,15 @@
 
 using namespace std;
 
-int ia = 42;
+// int ia = 42;
+
+//Ex 2.40 Struct
+struct Data_sales{
+    string Isbn;
+    int    b_sold;
+    float  b_price;
+    float total; //revenue
+};
 
  int main(){
      //Ex 2.1 2.2 2.3 2.4
@@ -52,7 +60,85 @@ int ia = 42;
     //     cout << x << sum << endl;
     // }
 
-    //REFERENCE
-    
+    //REFERENCE && POINTER
+    int i = 42;
+    int &r = i; // & follows a type and is part of a declaration; r is a reference
+    int *p; // * follows a type and is part of a declaration; p is a pointer
+    p = &i; // & is used in an expression as the address-of operator
+    *p = i; // * is used in an expression as the dereference operator
+    int &r2 = *p; // & is part of the declaration; * is the dereference operator
+    int *p1 = nullptr; // equivalent to int *p1 = 0;
+    int *p2 = 0; // directly initializes p2 from the literal constant 0
+    // must #include cstdlib
+    int *p3 = NULL; // equivalent to int *p3 = 0;
+
+    //Ex 2,27 
+    // int i = -1, &r = 0; // &r k bằng 1 giá trị được?
+    // int *const p2 = &r;
+    // const int i = -1, &r = 0;
+    // const int *const p3 = &r;
+    // const int *p1 = &r;
+    // const int &const r2;  // thieu dau =
+    // const int i2 = i, &r = i;
+
+    //Ex 2.28
+    // int i, *const cp;
+    // int *p1, *const p2; //
+    // const int ic, &r = ic; // &r address cannot be int?
+    // const int *const p3;  // too many const?
+    // const int *p;
+
+    //Ex 2.29
+    // i = ic;
+    // p1 = p3;
+    // p1 = &ic;
+    // p3 = &ic;
+    // p2 = p1;
+    // ic = *p3;
+
+    //Ex 2.32
+    // int null = 0;
+    // *p = null;
+
+    // int ival = 1024;
+    // int *pi = 0; // pi is a valid, null pointer
+    // int *pi2 = &ival; // pi2 is a valid pointer that holds the address of ival
+    // if (pi); // pi has value 0, so condition evaluates as false
+    // // ...
+    // if (pi2); // pi2 points to ival, so it is not 0; the condition evaluates as true
+ 
+    //Ex 2.34 to 2.38 decltype and auto
+    // Remember that decltype((variable)) (note, double parentheses) is always
+    // a reference type, but decltype(variable) is a reference type only if variable
+    // is a reference.
+
+    // int a = 3, b = 4, &z = a;
+    // decltype(a) c = a;   // not reference?
+    // decltype((b)) d = a; //reference
+    // ++c;
+    // ++d;
+    // cout << c << " and " << d << endl;
+
+    // decltype((a)) k = a;
+    // auto m = z;
+    // cout << k << " and " << m << endl;
+
+    //Ex 2.41
+    Data_sales b1,b2;
+    cout << "Input book 1 and book 2:" << endl;
+    cin >> b1.Isbn >> b1.b_sold >> b1.b_price;
+    cin >> b2.Isbn >> b2.b_sold >> b2.b_price;
+    if (b1.Isbn == b2.Isbn){
+        float Sum;
+        b1.total = b1.b_sold * b1.b_price;
+        b2.total = b2.b_sold + b2.b_price;
+        Sum = b1.total + b2.total;
+        cout << "Total: " << Sum << endl;
+        return 0;
+    }else{
+        cout << "wrong ISBN" << endl;
+        return -1;
+    }
+
  }  
  
