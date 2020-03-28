@@ -50,12 +50,83 @@ int main(){
     // }
 
     //Ex 3.15
-    string s;
-    std::vector<string> sv;
-    while(cin >> s){
-        sv.push_back(s);
-        for(std::vector<string>::iterator a = sv.begin(); a != sv.end(); a++){
-            cout << *a << " ";
-        }
-    }
+    // string s;
+    // std::vector<string> sv;
+    // while(cin >> s){
+    //     sv.push_back(s);
+    //     for(std::vector<string>::iterator a = sv.begin(); a != sv.end(); a++){
+    //         cout << *a << " ";
+    //     }
+    // }
+
+    //Ex 3.16
+    // vector<int> v4{10};
+    // vector<int> v5{10, 42};
+    // vector<string> v6{10};
+    // vector<string> v7{10, "hi"};
+    // for(std::vector<int>::iterator a = v4.begin(); a != v4.end(); a++){
+    //     cout << *a << " " << endl;
+    // }
+    // cout << size(v4) << endl;
+    // for(std::vector<int>::iterator a = v5.begin(); a != v5.end(); a++){
+    //     cout << *a << " " << endl;
+    // }
+    // cout << size(v5) << endl;
+    // for(std::vector<string>::iterator a = v6.begin(); a != v6.end(); a++){
+    //     cout << *a << " " << endl;
+    // }
+    // cout << size(v6) << endl;
+    // for(std::vector<string>::iterator a = v7.begin(); a != v7.end(); a++){
+    //     cout << *a << " " << endl;
+    // }
+    // cout << size(v7) << endl;
+
+    //Ex 3.17
+    // string s;
+    // vector<string> stv;
+    // while(cin >> s)
+    // {
+    //     stv.push_back(s);
+    // }
+    // for( auto &c : stv){
+    //     for(auto &d : c){
+    //         d = toupper(d);
+    //     }
+    // }
+    // const unsigned perLine = 8 ;
+    // decltype(stv.size()) wordCount ;
+
+    // for ( wordCount = 0; wordCount != stv.size() ; ++wordCount )
+    // {
+    //     std::cout << stv[wordCount] << ' ' ;
+    //     if ( (wordCount + 1) % perLine == 0 )  // evenly divisible?
+    //         std::cout << '\n' ;
+    // }
+
+    // if ( wordCount % perLine != 0 )
+    //     std::cout << '\n' ;
+    // return 0;
+
+    //Ex 3.18
+    // vector<int> i;
+    // i[0] = 42;
+
+    //Ex 3.20
+
+    // vector<int> i;
+    // int n,sum;
+    // while(cin >> n){
+    //     i.push_back(n);
+    // }
+    // int e = i.size();
+    // cout << e << endl;
+    // cout << "ans" << endl;
+    // for(int a = 0; a != i.size()/2; a++){
+    //     sum = i[a] + i[e - 1];
+    //     cout << sum << endl;
+    //     e = e -1;
+    // }
+
+    // ITERATORS
+    
 }
