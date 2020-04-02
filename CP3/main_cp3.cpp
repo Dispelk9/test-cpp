@@ -128,5 +128,57 @@ int main(){
     // }
 
     // ITERATORS
-    
+    // ARRAYs , same like vector, but with fixed range
+
+    //Ex 3.27
+    //Ex 3.28
+    // string sa[3];
+    // int    ia[3];
+    // cout << sa << endl;
+    // cout << ia << endl;
+    // // they both give some arbitrary number.
+
+    // //Ex 3.29
+    // unsigned scores[11] = {};
+    // unsigned grade;
+    // while(cin >> grade){
+    //     if (grade <= 100)
+    //     ++scores[grade/10];
+    // }
+    // cout << scores << endl;
+
+    //Ex 3.37
+    // const char ca[] = {'h', 'e', 'l', 'l', 'o'};
+    // const char *cp = ca;
+    // while (*cp) {
+    //     cout << *cp << endl;
+    //     ++cp;
+    // }
+
+    //Ex 3.38 Pointers contain addresses. 
+    // Adding two addresses makes no sense, because you have no idea what you would point to. 
+    // Subtracting two addresses lets you compute the offset between these two addresses, 
+    // which may be very useful in some situations.
+
+    //Ex 3.39
+    string str1;
+    string str2;
+    cin >> str1;
+    cin >> str2;
+
+    cout << str1 << endl;
+    cout << str2 << endl;
+    const char *c1 = str1.c_str();
+    const char *c2 = str2.c_str();
+
+    cout << c1 << endl;
+    cout << c2 << endl;
+
+    if(strcmp(c1,c2) == 0){
+        cout << "equal" << endl;
+
+    }else{
+        cout << "not equal" << endl;
+    }
+    //Ex 3.40
 }
