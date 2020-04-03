@@ -161,24 +161,50 @@ int main(){
     // which may be very useful in some situations.
 
     //Ex 3.39
-    string str1;
-    string str2;
-    cin >> str1;
-    cin >> str2;
+    // string str1;
+    // string str2;
+    // cin >> str1;
+    // cin >> str2;
 
-    cout << str1 << endl;
-    cout << str2 << endl;
-    const char *c1 = str1.c_str();
-    const char *c2 = str2.c_str();
+    // // cout << str1 << endl;
+    // // cout << str2 << endl;
+    // const char *c1 = str1.c_str();
+    // const char *c2 = str2.c_str();
 
-    cout << c1 << endl;
-    cout << c2 << endl;
+    // // cout << c1 << endl;
+    // // cout << c2 << endl;
 
-    if(strcmp(c1,c2) == 0){
-        cout << "equal" << endl;
+    // if(strcmp(c1,c2) == 0){
+    //     cout << "equal" << endl;
 
-    }else{
-        cout << "not equal" << endl;
+    // }else{
+    //     cout << "not equal" << endl;
+    // }
+    // //Ex 3.40
+    // int n = str1.length() + str2.length();
+    // char a[n];
+    // strcpy(a,str1.c_str());
+    // strcat(a," ");
+    // strcat(a,str2.c_str());
+    // cout << a << endl;
+
+    //Ex 3.41
+    // int from array to vector
+    // int a[] = {1,2,3,4};
+    // vector<int> b (begin(a),end(a));
+    // for(int i:b){
+    //     cout << i << endl;
+    // }
+
+    //Ex 3.42
+    //int from vector to array
+
+    vector<int> c = {1,2,3,4};
+    int n = size(c);
+    int a[n];
+    for(int i = 0;i < n;i++){
+        a[i] = c[i];
+        cout << a[i] << endl;
     }
-    //Ex 3.40
+    
 }
