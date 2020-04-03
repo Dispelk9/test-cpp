@@ -199,12 +199,32 @@ int main(){
     //Ex 3.42
     //int from vector to array
 
-    vector<int> c = {1,2,3,4};
-    int n = size(c);
-    int a[n];
-    for(int i = 0;i < n;i++){
-        a[i] = c[i];
-        cout << a[i] << endl;
+    // vector<int> c = {1,2,3,4};
+    // int n = size(c);
+    // int a[n];
+    // for(int i = 0;i < n;i++){
+    //     a[i] = c[i];
+    //     cout << a[i] << endl;
+    // }
+
+    //Ex 3.43
+    int ia[3][4] = {
+        {1,2,3,4},
+        {5,6,7,8},
+        {9,10,11,12}
+    }; //3 array, 1 array has 4 int
+    for(auto &row : ia){
+        for(auto &col : row){
+            cout << col << ' ';
+        }
+        cout << endl;
     }
-    
+
+    for(int r=0; r < 3;r++ ){
+        for(int c=0; c < 4;c++){
+            cout << ia[r][c] << ' ';
+        }
+        cout << endl;
+    }
+
 }
