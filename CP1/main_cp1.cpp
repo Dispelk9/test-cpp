@@ -4,7 +4,7 @@
 #include <vector>
 #include "Sales_item.h"
 
-using namespace std;
+using std::endl;
 using std::cin;
 using std::cout;
 

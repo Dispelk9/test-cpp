@@ -1,11 +1,12 @@
 #include <iostream>
+#include <string>
 #include "Sales_data.h"
 
 using namespace std;
 
  int main(){
      //Ex 2.1 2.2 2.3 2.4
-    //  unsigned u = 10, u2 = 42;
+    // unsigned u = 10, u2 = 42;
     // std::cout << u2 - u << std::endl;   // normal
     // std::cout << u - u2 << std::endl;   // unpredicted unsigned?
     // int i = 10, i2 = 42;

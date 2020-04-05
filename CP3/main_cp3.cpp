@@ -2,7 +2,11 @@
 #include <vector>
 #include <string>
 
-using namespace std;
+using std::cin;
+using std::cout;
+using std::endl;
+using std::string;
+using std::vector;
 
 int main(){
     // Chapter 3 STRING and VECTOR

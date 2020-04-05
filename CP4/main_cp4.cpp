@@ -1,7 +1,9 @@
-#include <stdio.h>
 #include <iostream>
+#include <string>
 
-using namespace std;
+using std::cout;
+using std::endl;
+using std::cin;
 
 int main(){
     cout << "hello" << endl;
